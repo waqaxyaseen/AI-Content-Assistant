@@ -45,14 +45,6 @@ next-env.d.ts
 # OS
 Thumbs.db
 
-# Mobile
-*.apk
-*.aab
-*.ipa
-ios/Pods/
-android/.gradle/
-android/app/build/
-ios/build/
 
 # Logs
 logs

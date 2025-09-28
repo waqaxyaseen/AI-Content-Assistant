@@ -1,6 +1,6 @@
 # AI Content Assistant - Content Generation & Marketing Platform
 
-A comprehensive AI-powered content generation and marketing assistant application designed for businesses, marketers, and content creators. This platform leverages artificial intelligence to automate content creation, optimize marketing campaigns, and provide intelligent insights.
+A comprehensive AI-powered content generation and marketing assistant web application designed for businesses, marketers, and content creators. This platform leverages artificial intelligence to automate content creation, optimize marketing campaigns, and provide intelligent insights.
 
 ## 🚀 Features
 
@@ -40,33 +40,17 @@ backend/
 └── shared/              # Shared utilities and types
 ```
 
-### Mobile App (React Native)
-```
-mobile/
-├── src/
-│   ├── components/      # Reusable UI components
-│   ├── screens/         # App screens
-│   ├── navigation/      # Navigation configuration
-│   ├── services/        # API services
-│   ├── store/          # State management (Redux)
-│   ├── utils/          # Utility functions
-│   └── types/          # TypeScript types
-├── android/            # Android-specific configuration
-├── ios/               # iOS-specific configuration
-└── assets/            # Images, fonts, etc.
-```
-
-### Web Dashboard (React/Next.js)
+### Web Dashboard (Next.js)
 ```
 web/
 ├── src/
-│   ├── components/      # React components
-│   ├── pages/          # Next.js pages
-│   ├── hooks/          # Custom React hooks
-│   ├── services/       # API services
-│   ├── store/          # State management
-│   ├── styles/         # CSS/SCSS files
-│   └── utils/          # Utility functions
+│   ├── app/            # Next.js App Router
+│   ├── components/     # Reusable UI components
+├── pages/              # Next.js Pages (legacy)
+├── contexts/           # React contexts
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+├── styles/             # CSS/Tailwind files
 └── public/             # Static assets
 ```
 
@@ -80,15 +64,6 @@ web/
 - **Message Queue**: Redis Bull Queue
 - **File Storage**: AWS S3 / Google Cloud Storage
 - **Monitoring**: Winston logging, Sentry error tracking
-
-### Mobile (React Native)
-- **Framework**: React Native 0.72+
-- **State Management**: Redux Toolkit
-- **Navigation**: React Navigation 6
-- **UI Library**: React Native Elements / NativeBase
-- **Networking**: Axios with interceptors
-- **Push Notifications**: React Native Push Notification
-- **Analytics**: React Native Firebase Analytics
 
 ### Web Dashboard
 - **Framework**: Next.js 13+ with App Router
@@ -106,31 +81,13 @@ web/
 - **CDN**: CloudFlare
 - **Load Balancer**: AWS ALB / GCP Load Balancer
 
-## 📱 Mobile App Features
-
-### iOS & Android Support
-- **Native Performance**: Optimized for both platforms
-- **Platform-Specific UI**: Follows iOS HIG and Material Design
-- **Offline Capability**: Draft saving and offline content viewing
-- **Push Notifications**: Real-time updates and campaign alerts
-- **Biometric Authentication**: Face ID, Touch ID, Fingerprint
-- **Deep Linking**: Direct navigation to specific content
-
-### App Store Optimization
-- **iOS App Store**: Complete metadata, screenshots, and review process
-- **Google Play Store**: Optimized listing with feature graphics
-- **App Store Connect**: Automated deployment pipeline
-- **Play Console**: Beta testing and gradual rollout
-
 ## 🚦 Getting Started
 
 ### Prerequisites
-- Node.js 18+
+- Node.js 22.20.0+
 - PostgreSQL 14+
 - Redis 6+
-- React Native CLI
-- Xcode (for iOS development)
-- Android Studio (for Android development)
+- npm 10.0.0+
 
 ### Environment Setup
 1. Clone the repository
@@ -141,37 +98,33 @@ cd ai-content-assistant
 
 2. Install dependencies
 ```bash
-# Backend
-cd backend && npm install
-
-# Mobile app
-cd ../mobile && npm install
-
-# Web dashboard
-cd ../web && npm install
+# Install all dependencies
+npm run setup
 ```
 
 3. Set up environment variables
 ```bash
-# Copy environment templates
-cp backend/.env.example backend/.env
-cp mobile/.env.example mobile/.env
-cp web/.env.example web/.env
+# Copy environment template
+cp web/.env.example web/.env.local
 ```
 
 4. Start development servers
 ```bash
-# Backend services
-cd backend && npm run dev
+# Start both backend and web services
+npm run dev
 
-# Mobile app (in separate terminal)
-cd mobile && npx react-native start
-# For iOS: npx react-native run-ios
-# For Android: npx react-native run-android
+# Or start them separately:
+# Backend services
+npm run dev:backend
 
 # Web dashboard (in separate terminal)
-cd web && npm run dev
+npm run dev:web
 ```
+
+The application will be available at:
+- Web Dashboard: http://localhost:3002
+- API Gateway: http://localhost:3000
+- API Documentation: http://localhost:3000/api/docs
 
 ## 📋 Development Phases
 
@@ -179,7 +132,6 @@ cd web && npm run dev
 - [x] Project setup and architecture
 - [ ] User authentication system
 - [ ] Basic content generation (text)
-- [ ] Simple mobile app with core features
 - [ ] Basic analytics dashboard
 
 ### Phase 2: Enhanced Features
