@@ -21,8 +21,8 @@ const PORT = process.env.PORT || 3000;
 app.use(helmet());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? [process.env.WEB_URL, process.env.MOBILE_APP_SCHEME]
-    : ['http://localhost:3001', 'http://localhost:19006'],
+    ? [process.env.WEB_URL, process.env.MOBILE_APP_SCHEME].filter(Boolean) as string[]
+    : ['http://localhost:3001', 'http://localhost:3002', 'http://localhost:19006'],
   credentials: true
 }));
 
