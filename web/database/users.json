@@ -1,0 +1,41 @@
+[
+  {
+    "id": "46858df0-62d1-4731-93ee-209ed02a116c",
+    "firstName": "Waqas",
+    "lastName": "Yaseen",
+    "email": "waqasyaseen311@gmail.com",
+    "password": "$2b$10$WupdKXzRXOUAPAj38Qxp4e3Tc66.WrMU/5tu3e1WZNsTnMDizsrvK",
+    "company": "",
+    "plan": "free",
+    "generationsUsed": 0,
+    "generationsLimit": 10,
+    "createdAt": "2025-09-27T04:15:35.893Z",
+    "lastLogin": "2025-09-27T04:15:35.893Z"
+  },
+  {
+    "id": "59430abe-2bb1-46f5-9365-161767a64946",
+    "firstName": "Hamas",
+    "lastName": "Mushtaq",
+    "email": "hamasmushtaq77@gmail.com",
+    "password": "$2b$10$6yRQ2Fi9Usqtsf8AH/80YeJooOsciFxY6.1jeGy8vU9FInohThZ9a",
+    "company": "",
+    "plan": "professional",
+    "generationsUsed": 0,
+    "generationsLimit": 500,
+    "createdAt": "2025-09-27T04:43:03.365Z",
+    "lastLogin": "2025-09-27T10:45:13.956Z"
+  },
+  {
+    "id": "1fb94d1a-10b3-4357-9093-27b1721c3f9d",
+    "firstName": "Ali",
+    "lastName": "Hassan",
+    "email": "alihassanmughal@gmail.com",
+    "password": "$2b$10$Oe9bfwX8LU7byeEKRBZNSOd.kM.tB9eY/jwVAT3uXuVjWzhFnCQVm",
+    "company": "",
+    "plan": "professional",
+    "generationsUsed": 0,
+    "generationsLimit": 500,
+    "createdAt": "2025-09-28T19:23:46.288Z",
+    "lastLogin": "2025-09-28T19:23:46.288Z"
+  }
+]
